@@ -2,6 +2,12 @@ from __future__ import annotations
 from typing import List, Tuple, Union, Optional
 
 class BoardMatrix:
+    """Representation of the Board Matrix for the Chinese Checkers.
+
+    This object is an iterable which can also be indexed for assigning
+    values and getting items. This is a friendly API for representing 
+    Matrix as list of list. 
+    """    
     mat:List[List[Union[None, str]]]
     row:int
     col:int
@@ -44,6 +50,11 @@ class BoardMatrix:
 
 
 class BoardGenerator:
+    """This object represents the interface visible to the user. 
+    This has dependencies to the BoardMatrix objects which serves 
+    as the basis for drawing the Chinese Checkers board.
+    """    
+
     p1:int = 0
     p2:int = 0
 
@@ -61,6 +72,7 @@ class BoardGenerator:
     def save_game(self) -> None: ...
     def update(self, row:int, col:int) -> None: ...
     def get_score(self) -> Tuple[int, int]: ...
+
 
 if __name__ == '__main__':
     # bg = BoardGenerator(6,8)
