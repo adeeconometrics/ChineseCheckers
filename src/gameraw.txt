@@ -1,0 +1,1 @@
+[['x', None, None, None, None, None, None], [None, None, 'x', 'o', None, None, None], [None, None, 'x', None, None, None, None], [None, None, None, None, 'o', None, None], [None, None, None, None, None, None, None], [None, None, None, None, None, None, None], [None, None, None, None, None, None, None], [None, None, None, None, None, None, None]]
