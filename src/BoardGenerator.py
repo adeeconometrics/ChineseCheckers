@@ -21,7 +21,7 @@ class BoardMatrix:
     
     def __str__(self) -> str: 
         str_lst = [list(map(lambda x: ' ' if x is None else x, y)) for y in self.mat]
-        return '\n'.join('|'.join(f' {x} ' for x in y) + '\n' + (self.max -1)*'---+' for y in str_lst)
+        return '\n'.join('|'.join(f' {x} ' for x in y) + '\n' + (self.max - 1)*'---+' for y in str_lst)
         
     def __repr__(self) -> str:
         return f'{self.mat}'
@@ -137,7 +137,6 @@ class BoardGenerator:
     
     def get_score(self) -> Tuple[int, int]: 
         """
-
         Returns:
             Tuple[int, int]: score of player 1 and player 2
         """        
@@ -146,13 +145,15 @@ class BoardGenerator:
 
 if __name__ == '__main__':
     bg = BoardGenerator(8,7)
-    # bg = BoardMatrix(4,5)
-    # bg[0,0]='x'
-    # bg[3,4]='o'
+    # bg = BoardMatrix(5,5)
+    bg[0,0]='x'
+    bg[3,4]='o'
     # bg[1,2]='x'
     # bg[1,3]='o'
     # bg[2,2]='x'
-    # print(bg)
-    # bg.save_raw('gameraw')
-    bg.parse_file('gameraw')
+    # # print(bg)
+    # # bg.save_raw('gameraw')
+    # # bg.parse_file('gameraw')
     print(bg)
+    # p1 = A()
+    # print(p1)
